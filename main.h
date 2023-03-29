@@ -11,7 +11,7 @@ int _putchar(char c);
 typedef struct structure
 {
 	char formatChar;
-	int (*f)(va_list list);
+	int (*f)(va_list);
 } op_f;
 
 

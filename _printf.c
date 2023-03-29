@@ -14,26 +14,28 @@ _printf(const char *format, ...)
 
 	while (format[iterator])
 	{
-		for (; format[iterator] != '%' && format[iterator]; iterator++)
+		for (; format[iterator] != '%' && format[iterator] != '\0'; iterator++)
 			lenght += _putchar(format[iterator]);
 
 		if (format[iterator] == '%')
 		{
-			iterator++;
-			if (!format[iterator])
+			if (!format[iterator + 1])
 				return (-1);
 
-			function = get_format(&format[iterator]);
+			function = get_format(&format[iterator + 1]);
 
-			if (function)
+			if (function != NULL)
 			{
-				lenght += function(list); 
+				lenght += function(list);
+				iterator++;
 				/*Sum bytes of string and extern function*/
 			}
 			else
 			{
 				lenght += _putchar(format[lenght]);
+				format[iterator + 1];
 			}
+			iterator++;
 		}
 	}
 	va_end(list);

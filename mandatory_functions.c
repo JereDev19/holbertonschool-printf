@@ -5,14 +5,9 @@ function_char(va_list param)
 {
 	int cant;
 	char result = va_arg(param, int);
-	char char_array[2];
-
-	char_array[0] = result;
-	char_array[1] = '\0';
-	cant = _strlen(char_array - 1);
 
 	_putchar(result);
-	return (cant);
+	return (1);
 }
 int
 function_string(va_list param)
