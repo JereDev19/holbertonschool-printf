@@ -33,7 +33,7 @@ _printf(const char *format, ...)
 			else
 			{
 				lenght += _putchar(format[lenght]);
-				format[iterator + 1];
+				lenght += format[iterator + 1];
 			}
 			iterator++;
 		}

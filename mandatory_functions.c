@@ -3,7 +3,6 @@
 int
 function_char(va_list param)
 {
-	int cant;
 	char result = va_arg(param, int);
 
 	_putchar(result);
@@ -18,7 +17,7 @@ function_string(va_list param)
 	if (!string)
 	{
 		_puts("(null)");
-		return (1);
+		return (6);
 	}
 
 	for (; string[iterator] != '\0'; iterator++)
