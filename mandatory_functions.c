@@ -5,24 +5,22 @@ function_char(va_list param)
 {
 	char result = va_arg(param, int);
 
-	_putchar(result);
-	return (1);
+	return (_putchar(result));
 }
+
 int
 function_string(va_list param)
 {
 	char *string = va_arg(param, char *);
-	int iterator = 0;
+	int i = 0;
 
 	if (!string)
-	{
-		_puts("(null)");
-		return (6);
-	}
+		return (_puts("(null)"));
 
-	for (; string[iterator] != '\0'; iterator++)
-		_putchar(string[iterator]);
-	return (iterator);
+	for (; string[i] != '\0'; i++)
+		_putchar(string[i]);
+
+	return (i);
 }
 
 int
@@ -30,6 +28,5 @@ function_percent(va_list param __attribute__((unused)))
 {
 	char percent = '%';
 
-	_putchar(percent);
-	return (1);
+	return (_putchar(percent));
 }

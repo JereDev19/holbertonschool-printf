@@ -10,8 +10,7 @@ _puts(char *s)
 		_putchar(s[i]);
 		i++;
 	}
-	putchar('\n');
-	return (0);
+	return (i);
 }
 
 int
