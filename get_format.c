@@ -1,7 +1,16 @@
 #include "main.h"
 
-int
-(*get_format(const char *formatParam))(va_list)
+/**
+ * get_format - getting the format.
+ *
+ * @formatParam: type of format passed for params.
+ *
+ * Return:
+ * - A function in case of match.
+ * - NULL in case of error.
+ */
+
+int (*get_format(const char *formatParam))(va_list)
 {
 	op_f format[] = {
 		{ 'c', function_char },

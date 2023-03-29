@@ -5,8 +5,18 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/*Principal function*/
 int _printf(const char *format, ...);
+
+/* Auxilirary function to print a character.*/
 int _putchar(char c);
+
+/**
+ * struct structure - struct that contain format
+ * @f: Pointer function
+ * @formatChar: format to char
+ *
+ */
 
 typedef struct structure
 {

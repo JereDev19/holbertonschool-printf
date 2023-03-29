@@ -1,15 +1,31 @@
 #include "main.h"
 
-int
-function_char(va_list param)
+/**
+ * function_char - getting char for func.
+ *
+ * @param: List of params.
+ *
+ * Return:
+ * 1 if can print.
+ * 0 if cannot print.
+ */
+
+int function_char(va_list param)
 {
 	char result = va_arg(param, int);
 
 	return (_putchar(result));
 }
 
-int
-function_string(va_list param)
+/**
+ * function_string - print the string.
+ *
+ * @param: List of params.
+ *
+ * Return: The cant of string.
+ */
+
+int function_string(va_list param)
 {
 	char *string = va_arg(param, char *);
 	int i = 0;
@@ -23,8 +39,15 @@ function_string(va_list param)
 	return (i);
 }
 
-int
-function_percent(va_list param __attribute__((unused)))
+/**
+ * function_percent - print a percent.
+ *
+ * @param: List of params that not used.
+ *
+ * Return: 1 if can print.
+ */
+
+int function_percent(va_list param __attribute__((unused)))
 {
 	char percent = '%';
 
