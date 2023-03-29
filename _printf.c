@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				/* -- Print all string + % -- */
-				lenght += _putchar(format[lenght]);
+				lenght += _putchar('%');
 				/* -- Print the next position - following the porcentaje -- */
 				lenght += format[iterator + 1];
 			}
