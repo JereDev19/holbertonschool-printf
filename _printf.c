@@ -10,43 +10,44 @@
 
 int _printf(const char *format, ...)
 {
+	/* To create variables */
 	va_list list;
 	int iterator = 0, lenght = 0;
-	int (*function)(va_list);
+	int (*function)(va_list); /* Pointer to function */
 
-	va_start(list, format);
-
-	if (!format)
+	va_start(list, format); /* Start the list */
+	if (!format) /* To verificate format */
 		return (-1);
 
 	while (format[iterator])
 	{
 		for (; format[iterator] != '%' && format[iterator] != '\0'; iterator++)
-			/* - Putchar return 1 if can print something - */
-			lenght += _putchar(format[iterator]);
+			/*While the character is not % and do not reach*/
+			lenght += _putchar(format[iterator]);/*Return 1 if can print something*/
+
 		if (format[iterator] == '%')
 		{
+			/* -- Verify that do not reach the end  --*/
 			if (format[iterator + 1] == '\0')
 				return (-1);
-
+			/*Return a function, that return is stored in a pointer to function*/
 			function = get_format(&format[iterator + 1]);
 
 			if (function != NULL)
 			{
 				/* - Save the return of the specific function - cant of characters.*/
 				lenght += function(list);
-				iterator++;
-				/*Sum bytes of string and extern function*/
+				/*Sum bytes of string and extern function for the length*/
 			}
 			else
 			{
-				/* -- Print all string + % -- */
+				/* -- Print all string and % -- */
 				lenght += _putchar(format[iterator]);
 			}
+			/* -- Next position to continue iterating  --*/
 			iterator++;
 		}
 	}
-	va_end(list);
-	return (lenght);
+	va_end(list); /* Release the list */
+	return (lenght); /* Return the length of the string */
 }
-
