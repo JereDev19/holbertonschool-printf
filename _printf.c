@@ -32,11 +32,11 @@ int _printf(const char *format, ...)
 				return (-1);
 			/*Return a function, that return is stored in a pointer to function*/
 			function = get_format(&format[iterator + 1]);
-
 			if (function != NULL)
 			{
 				/* - Save the return of the specific function - cant of characters.*/
 				lenght += function(list);
+				iterator++;
 				/*Sum bytes of string and extern function for the length*/
 			}
 			else
