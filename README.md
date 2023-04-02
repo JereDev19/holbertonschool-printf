@@ -17,10 +17,12 @@
 
 <h2 align="center">About The Project</h2>
 
-This is a custom implementation of the printf function in C, developed as a project for Holberton School. The function supports the following format specifiers: %s, %d, %i, %c and %%, and works the same way as the original printf function.
+<p align="center">This is a custom implementation of the printf function in C, developed as a project for Holberton School. The function supports the following format specifiers: %s, %d, %i, %c and %%, and works the same way as the original printf function.</p>
 
 <br>
+
 </br>
+
 
 ##  Flowchart
 
@@ -35,15 +37,12 @@ The _printf function works very similar as the original printf function.
 
 * To call the function use this: _printf("format string", arguments);
 
-<br>
-</br>
-
 The first argument is a string that contains format specifiers, which are replaced by the corresponding argument values. The function returns the number of characters printed (excluding the terminating null byte).
 
 <br>
 </br>
 
-# There is an example-->>
+# Example:
 
     char *str = "This is a holberton project";
     int num = 42;
