@@ -18,7 +18,7 @@ This is a custom implementation of the printf function in C, developed as a proj
 
 ##  Flowchart
 
-[Search "Flowchart" in Flowchart repository!](https://github.com/JereDev19/holbertonschool-printf/tree/main/flowChart_printf)
+[Search "Flowchart" in Flowchart repository!](https://github.com/JereDev19/holbertonschool-printf/tree/main/FlowPrintf)
 
 ## Usage
 
