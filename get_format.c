@@ -18,6 +18,7 @@ int (*get_format(const char *formatParam))(va_list)
 		{ '%', function_percent },
 		{ 'i', function_decimal },
 		{ 'd', function_decimal },
+		{ 'b', function_unsigned },
 		{ '\0', NULL },
 	};
 
