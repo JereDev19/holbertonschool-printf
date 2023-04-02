@@ -39,5 +39,5 @@ int function_decimal(va_list param);
 int _puts(char *);
 int _putchar(char);
 int _strlen(char *);
-
+int convert_base(long int);
 #endif
