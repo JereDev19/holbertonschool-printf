@@ -14,13 +14,13 @@ int function_unsigned(va_list param)
 	int i = 0, j = 0;
 	unsigned int params;
 
-	params = va_arg(param, unsigned int);
 	rest = (char *)malloc(sizeof(char) * 64);
-
 	if (!rest)
 		return (-1);
 
-	while (params != 0 && i < 63)
+	params = va_arg(param, unsigned int);
+
+	while (params > 0)
 	{
 		rest[i] = ((params % 2) + '0');
 		params /= 2;
