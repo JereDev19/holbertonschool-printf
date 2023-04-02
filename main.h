@@ -8,9 +8,6 @@
 /*Principal function*/
 int _printf(const char *format, ...);
 
-/* Auxilirary function to print a character.*/
-int _putchar(char c);
-
 /**
  * struct structure - struct that contain format
  * @f: Pointer function
@@ -35,9 +32,13 @@ int function_percent(va_list param);
 int function_integer(va_list param);
 int function_decimal(va_list param);
 
+/* Advanced functions */
+int function_unsigned(va_list param);
+
 /* Auxiliary functions */
 int _puts(char *);
 int _putchar(char);
 int _strlen(char *);
+int _putchar(char c);
 int convert_base(long int);
 #endif
