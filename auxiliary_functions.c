@@ -56,3 +56,38 @@ _strlen(char *param)
 
 	return (iterator);
 }
+
+
+/**
+ * convert_base - Convert a number to base decimal.
+ *
+ * @number: number to convert.
+ *
+ * Return: Length of number
+ */
+
+int convert_base(long int number)
+{
+	int counter = 0;
+	long int i = 1;
+
+	if (number == 0)
+		return (_putchar('0'));
+
+	if (number < 0)
+	{
+		_putchar('-');
+		number = -number;
+		counter++;
+	}
+
+	for (; i <= number; i *= 10)
+		counter++;
+
+	i /= 10;
+
+	for (; i > 0; i /= 10)
+		_putchar(((number / i) % 10) + '0');
+
+	return (counter);
+}

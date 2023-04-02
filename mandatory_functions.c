@@ -53,3 +53,14 @@ int function_percent(va_list param __attribute__((unused)))
 
 	return (_putchar(percent));
 }
+
+
+
+int
+function_decimal(va_list param)
+{
+	long int value = va_arg(param, int);
+	int returnCount = convert_base(value);
+
+	return (returnCount);
+}
