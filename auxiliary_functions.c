@@ -80,14 +80,25 @@ int convert_base(long int number)
 		number = -number;
 		counter++;
 	}
-
+	/* Recorremos el largo del numero utilizando potencias de 10*/
 	for (; i <= number; i *= 10)
 		counter++;
 
+	/**
+	 * - Por el <= entra al for lo que provoca que se haga otra potencia.
+	 * - Por eso le sacamos un 0.
+	 */
+
 	i /= 10;
 
+	/*
+	 * Dividimos el numero original entre potencias y le vamos sacando 0
+	 * asi se pueden ir dividiendo, a su vez, obtenemos los digitos de
+	 * izquierda a derecha.
+	 **/
 	for (; i > 0; i /= 10)
 		_putchar(((number / i) % 10) + '0');
 
+	/*Retornamos el largo*/
 	return (counter);
 }
