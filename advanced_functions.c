@@ -7,6 +7,7 @@
  *
  * Return: Length of number in binary.
  */
+
 int function_unsigned(va_list param)
 {
 	char *rest = NULL;
@@ -28,7 +29,7 @@ int function_unsigned(va_list param)
 
 	rest[i] = '\0';
 
-	for (j = i; j >= 0; j--)
+	for (j = i - 1; j >= 0; j--)
 		_putchar(rest[j]);
 
 	free(rest);
