@@ -10,32 +10,23 @@
 
 int function_unsigned(va_list param)
 {
-	char *rest = NULL;
+	unsigned int params = va_arg(param, unsigned int);
+	unsigned int buffer[100];
 	int i = 0, j = 0;
-	unsigned int params;
 
-	rest = (char *)malloc(sizeof(char) * 64);
-	if (!rest)
-		return (-1);
-
-	params = va_arg(param, unsigned int);
 	if (param == 0)
 	{
 		_putchar('0');
-		free(rest);
 		return (1);
 	}
 	while (params > 0)
 	{
-		rest[i] = ((params % 2) + '0');
+		buffer[i] = ((params % 2) + '0');
 		params /= 2;
 		i++;
 	}
-
-	rest[i] = '\0';
-
 	for (j = i - 1; j >= 0; j--)
-		_putchar(rest[j]);
-	free(rest);
+		_putchar(buffer[j]);
+
 	return (i);
 }
