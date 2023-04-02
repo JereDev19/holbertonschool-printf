@@ -19,7 +19,12 @@ int function_unsigned(va_list param)
 		return (-1);
 
 	params = va_arg(param, unsigned int);
-
+	if (param == 0)
+	{
+		_putchar('0');
+		free(rest);
+		return (1);
+	}
 	while (params > 0)
 	{
 		rest[i] = ((params % 2) + '0');
@@ -31,7 +36,6 @@ int function_unsigned(va_list param)
 
 	for (j = i - 1; j >= 0; j--)
 		_putchar(rest[j]);
-
 	free(rest);
 	return (i);
 }
