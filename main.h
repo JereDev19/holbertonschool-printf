@@ -1,8 +1,6 @@
 #ifndef _main_h_
 #define _main_h_
 #include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
 
 /*Principal function*/
@@ -41,4 +39,5 @@ int _putchar(char);
 int _strlen(char *);
 int _putchar(char c);
 int convert_base(long int);
+
 #endif
