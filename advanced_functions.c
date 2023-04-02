@@ -12,7 +12,7 @@ int function_unsigned(va_list param)
 {
 	unsigned int params = va_arg(param, unsigned int);
 	unsigned int buffer[100];
-	int i = 0, j = 0;
+	int i = 0, length = 0;
 
 	if (param == 0)
 	{
@@ -21,12 +21,14 @@ int function_unsigned(va_list param)
 	}
 	while (params > 0)
 	{
-		buffer[i] = ((params % 2) + '0');
+		buffer[i] = params % 2;
 		params /= 2;
 		i++;
 	}
-	for (j = i - 1; j >= 0; j--)
-		_putchar(buffer[j]);
-
-	return (i);
+	for (i -= 1; i >= 0; i--)
+	{
+		_putchar(buffer[i] + '0');
+		length++;
+	}
+	return (length);
 }
