@@ -15,7 +15,7 @@
 <br>
 </br>
 
-## About The Project
+<h2 align="center">About The Project</h2>
 
 This is a custom implementation of the printf function in C, developed as a project for Holberton School. The function supports the following format specifiers: %s, %d, %i, %c and %%, and works the same way as the original printf function.
 
@@ -64,6 +64,8 @@ The first argument is a string that contains format specifiers, which are replac
 <br>
 </br>
 
+<div align="center">
+
 ## Format Specifiers
 
 | Format Specifiers | Description |
@@ -73,6 +75,8 @@ The first argument is a string that contains format specifiers, which are replac
 | %s | Print a string. |
 | %c | Print a single character. |
 | %% | Simply print a %. |
+
+</div>
 
 <br>
 </br>
