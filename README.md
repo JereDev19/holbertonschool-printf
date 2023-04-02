@@ -20,9 +20,10 @@
 <p align="center">This is a custom implementation of the printf function in C, developed as a project for Holberton School. The function supports the following format specifiers: %s, %d, %i, %c and %%, and works the same way as the original printf function.</p>
 
 <br>
-
 </br>
 
+<br>
+</br>
 
 ##  Flowchart
 
