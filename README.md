@@ -12,23 +12,36 @@
   </p>
 </p>
 
+<br>
+</br>
+
 ## About The Project
 
 This is a custom implementation of the printf function in C, developed as a project for Holberton School. The function supports the following format specifiers: %s, %d, %i, %c and %%, and works the same way as the original printf function.
+
+<br>
+</br>
 
 ##  Flowchart
 
 [Search "Flowchart" in Flowchart repository!](https://github.com/JereDev19/holbertonschool-printf/tree/main/FlowPrintf)
 
+<br>
+</br>
+
 ## Usage
 
 The _printf function works very similar as the original printf function.
 
-* To call the function use this:
+* To call the function use this: _printf("format string", arguments);
 
-    _printf("format string", arguments);
+<br>
+</br>
 
 The first argument is a string that contains format specifiers, which are replaced by the corresponding argument values. The function returns the number of characters printed (excluding the terminating null byte).
+
+<br>
+</br>
 
 # There is an example-->>
 
@@ -48,6 +61,9 @@ The first argument is a string that contains format specifiers, which are replac
     Character: H
     Percent sign: %
 
+<br>
+</br>
+
 ## Format Specifiers
 
 | Format Specifiers | Description |
@@ -57,6 +73,9 @@ The first argument is a string that contains format specifiers, which are replac
 | %s | Print a string. |
 | %c | Print a single character. |
 | %% | Simply print a %. |
+
+<br>
+</br>
 
 ## Authors
 
