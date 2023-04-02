@@ -19,13 +19,15 @@ int function_unsigned(va_list param)
 		_putchar('0');
 		return (1);
 	}
-	while (params > 0)
+	for (; params > 0; i++)
 	{
 		buffer[i] = params % 2;
 		params /= 2;
-		i++;
 	}
-	for (i -= 1; i >= 0; i--)
+
+	buffer[i] = '\0';
+
+	for (i = i - 1; i >= 0; i--)
 	{
 		_putchar(buffer[i] + '0');
 		length++;
