@@ -84,4 +84,4 @@ The first argument is a string that contains format specifiers, which are replac
 ## Authors
 
 * **Jeremias Erba** - *Holberton Student* - [Jeremias Erba](https://github.com/JereDev19/) - *Software development and team leadership.*
-* **Lautaro Rodriguez** - *Holberton Student* - [Lautaro Rodriguez](https://github.com/LautareteX/) - *Software Developer.*
+* **Gabriel Acosta** - *Holberton Student* - [Gabriel Acosta](https://github.com/GabiAcosta) - *Software Developer.*
